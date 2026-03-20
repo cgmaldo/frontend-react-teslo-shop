@@ -1,4 +1,5 @@
-import { createBrowserRouter, createHashRouter, Navigate } from "react-router";
+// import { createBrowserRouter } from "react-router";
+import { createHashRouter, Navigate } from "react-router";
 import { lazy } from "react";
 
 import { DashboardPage } from "../admin/pages/dashboard/DashboardPage";
