@@ -3,7 +3,6 @@ import { Separator } from "@/components/ui/separator";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { useSearchParams } from "react-router";
-import { memo } from "react";
 
 const sizes = [
     { id: "xs", label: "XS" },

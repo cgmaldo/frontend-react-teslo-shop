@@ -60,7 +60,7 @@ export const ProductForm = ({ title, subTitle, product, onSubmit, isPending }: P
         const newTagSet = new Set(getValues('tags'));
         newTagSet.add(newTag);
         setValue('tags', Array.from(newTagSet));
-        inputTagRef.current.value = '';
+        inputTagRef.current!.value = '';
     };
 
     const removeTag = (tag: string) => {

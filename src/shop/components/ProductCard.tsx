@@ -11,7 +11,7 @@ interface Props {
     sizes: Size[];
 }
 
-export const ProductCard = ({ id, name, price, image, category, sizes }: Props) => {
+export const ProductCard = ({ name, price, image, category, sizes }: Props) => {
     return (
         <Card className="group border-0 shadow-none product-card-hover cursor-pointer">
             <CardContent className="p-0">

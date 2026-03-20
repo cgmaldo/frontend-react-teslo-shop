@@ -7,10 +7,10 @@ export const useProducts = () => {
     const [searchParams] = useSearchParams();
 
     const queryPage = searchParams.get('page') || '1';
-    const page = isNaN(queryPage) ? 1 : +queryPage;
+    const page = isNaN(Number(queryPage)) ? 1 : +queryPage;
 
     const queryLimit = searchParams.get('limit') || '9';
-    const limit = isNaN(queryLimit) ? 1 : +queryLimit;
+    const limit = isNaN(Number(queryLimit)) ? 1 : +queryLimit;
 
     const offset = (page - 1) * limit;
 

@@ -10,8 +10,8 @@ interface Props {
     products: Product[];
 }
 
-// export type ViewModes1 = 'grid' | 'list';
-export enum ViewModes { grid = 'grid', list = 'list' };
+export type ViewModes = 'grid' | 'list';
+// export enum ViewModes { grid = 'grid', list = 'list' };
 
 export const ProductsGrid = ({ products }: Props) => {
     const [showFilters, setShowFilters] = useState(false)
@@ -20,7 +20,7 @@ export const ProductsGrid = ({ products }: Props) => {
 
     const viewMode = searchParams.get('viewMode') ?? 'grid'
 
-    const handleViewModeChange = (mode: ViewModes = ViewModes.grid) => {
+    const handleViewModeChange = (mode: ViewModes = 'grid') => {
         searchParams.set('viewMode', mode);
         setSearchParams(searchParams);
     }
@@ -54,7 +54,7 @@ export const ProductsGrid = ({ products }: Props) => {
                             <Button
                                 variant={viewMode === 'grid' ? 'default' : 'ghost'}
                                 size="sm"
-                                onClick={() => handleViewModeChange(ViewModes.grid)}
+                                onClick={() => handleViewModeChange('grid')}
                                 className="rounded-r-none"
 
                             >
@@ -63,7 +63,7 @@ export const ProductsGrid = ({ products }: Props) => {
                             <Button
                                 variant={viewMode === 'list' ? 'default' : 'ghost'}
                                 size="sm"
-                                onClick={() => handleViewModeChange(ViewModes.list)}
+                                onClick={() => handleViewModeChange('list')}
                                 className="rounded-l-none"
                             >
                                 <List className="h-4 w-4" />

@@ -4,7 +4,6 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { CustomLogo } from "@/components/custom/CustomLogo"
 import { Link, useNavigate } from "react-router"
-import { registerAction } from "@/auth/actions/resgister.action"
 import { useAuthStore } from "@/auth/store/auth.store"
 import { toast } from "sonner"
 
