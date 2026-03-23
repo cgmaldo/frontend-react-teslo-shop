@@ -16,6 +16,7 @@ import { AdminRoute, NotAuthenticatedRoute } from "@/components/routes/Protected
 const AuthLayout = lazy(() => import('../auth/layouts/AuthLayout'));
 const AdminLayout = lazy(() => import('../admin/layouts/AdminLayout'));
 
+// export const appRouter = createBrowserRouter([
 export const appRouter = createHashRouter([
     // Public routes
     {
