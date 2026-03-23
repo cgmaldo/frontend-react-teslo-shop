@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Filter, Grid, List } from "lucide-react";
 import { ProductCard } from "./ProductCard";
 import { FilterSidebar } from "./FilterSidebar";
-import { useSearchParams } from "react-router";
+import { Link, useSearchParams } from "react-router";
 import { useState } from "react";
 import type { Product } from "@/interfaces/product.interface";
 
@@ -105,15 +105,17 @@ export const ProductsGrid = ({ products }: Props) => {
                             }
                         >
                             {products.map((product) => (
-                                <ProductCard
-                                    key={product.id}
-                                    id={product.id}
-                                    name={product.title}
-                                    price={product.price}
-                                    image={product.images[0] || 'https://placehold.co/250x250'}
-                                    category={product.gender}
-                                    sizes={product.sizes}
-                                />
+                                <Link to={`/product/${product.id}`}>
+                                    <ProductCard
+                                        key={product.id}
+                                        id={product.id}
+                                        name={product.title}
+                                        price={product.price}
+                                        image={product.images[0] || 'https://placehold.co/250x250'}
+                                        category={product.gender}
+                                        sizes={product.sizes}
+                                    />
+                                </Link>
                             ))}
                         </div>
                     </div>
